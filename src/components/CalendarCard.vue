@@ -38,7 +38,7 @@ const removeFromDay = (recipes: { id: number; date: Date }): void => {
       <h2 class="text-h2">{{ useFormatDate(card.date) }}</h2>
     </v-sheet>
     <v-sheet class="ma-2 pa-2">
-      <v-btn text @click="addRecipeToDay(card)" icon="mdi-plus"></v-btn>
+      <v-btn @click="addRecipeToDay(card)" icon="mdi-plus"></v-btn>
     </v-sheet>
   </v-sheet>
   <v-col>
@@ -50,11 +50,7 @@ const removeFromDay = (recipes: { id: number; date: Date }): void => {
 
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn
-          text
-          icon="mdi-trash-can-outline"
-          @click="removeFromDay({ id: today.id, date: card.date })"
-        ></v-btn>
+        <v-btn icon="mdi-trash-can-outline" @click="removeFromDay({ id: today.id, date: card.date })"></v-btn>
       </v-card-actions>
     </v-card>
   </v-col>

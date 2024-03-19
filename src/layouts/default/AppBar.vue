@@ -8,16 +8,14 @@ import AppLink from '@/components/AppLink.vue';
       <v-list>
         <v-list-item>
           <v-btn flat block><app-link to="/">Home</app-link></v-btn>
-          <v-btn flat block
-            ><app-link to="/recipes">Recipes</app-link></v-btn
-          >
+          <v-btn flat block><app-link to="/recipes">Recipes</app-link></v-btn>
         </v-list-item>
       </v-list>
     </v-menu>
 
     <v-app-bar-title>
       <v-icon icon="mdi-silverware-fork-knife" />
-      Meal planner
+      <app-link class="text-decoration-none" to="/">Meal planner</app-link>
     </v-app-bar-title>
   </v-app-bar>
 </template>
