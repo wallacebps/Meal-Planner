@@ -1,26 +1,16 @@
 <script setup lang="ts">
-// import { usePlannerStore } from "@/stores/modules/planner";
 const emits = defineEmits(["openPreview"]);
 
-// const store = usePlannerStore();
 
 import type { Recipe } from "@/types/spoonacular";
 interface RecipeList extends Recipe {
   date: Date;
 }
 
-// import ItemRating from "./ItemRating.vue";
-
 const props = defineProps<{
   recipes: RecipeList[];
   title: string;
-//   removable?: boolean; 
 }>();
-
-// const removeFromDay = (recipes: { id: number; date: Date }): void => {
-//   const { id, date } = recipes;
-//   store.removeRecipeByIdDate({ id, date });
-// };
 
 const openPreview = (recipe: Recipe): void => {
   emits("openPreview", recipe);
