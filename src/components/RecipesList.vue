@@ -63,7 +63,7 @@ onMounted(() => {
       <v-card v-if="selectedRecipe">
         <cooking-instructions :id="selectedRecipe.id" />
         <v-card-actions>
-          <v-btn text>
+          <v-btn>
             <app-link :to="`/recipe/${selectedRecipe.id}`"
               >Cooking instructions</app-link
             ></v-btn
